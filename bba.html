@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3am D'spa Trần Xuân Soạn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header {
+  padding: 16px;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.sub-info {
+  font-size: 14px;
+  color: #555;
+}
+
+.sub-info span {
+  margin-right: 8px;
+}
+
+.status {
+  color: green;
+  font-weight: bold;
+}
+
+.years {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(95%);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #1a73e8;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  color: #ff4081;
+}
+
+.details {
+  padding: 16px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.8s ease-in-out;
+}
+
+.card.animate .services ul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services li {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.actions {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.actions a {
+  color: #1a73e8;
+  text-decoration: none;
+  margin-top: 6px;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+
+.actions a:hover {
+  color: #ff4081;
+}
+</style>
+  <div class="card animate">
+    <div class="header">
+      <h1>3am D'spa Trần Xuân Soạn</h1>
+      <div class="sub-info">
+        <span class="rating">5.0 ★</span>
+        <span class="type">Facial spa</span>
+        <span class="status">Open</span>
+      </div>
+      <p class="years">10+ years in business</p>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="images/spa.jpg" alt="Mặt tiền spa" />
+    </div>
+
+    <div class="buttons">
+      <button class="btn" onclick="showAlert('Gọi ngay!')">📞 Call</button>
+      <button class="btn" onclick="showAlert('Chỉ đường đến spa!')">📍 Directions</button>
+      <button class="btn" onclick="showAlert('Chia sẻ địa điểm!')">🔗 Share</button>
+      <button class="btn" onclick="window.open('https://3amdspa.com', '_blank')">🌐 Website</button>
+    </div>
+
+    <div class="details">
+      <p><strong>Open</strong> · Closes 7:15 PM</p>
+      <div class="services">
+        <p><strong>Services:</strong></p>
+        <ul>
+          <li>🌿 CBD Facial</li>
+          <li>💧 Deep Cleansing Facial</li>
+          <li>✨ Waxing</li>
+          <li>🧴 Trị mụn</li>
+          <li>⚡ Công nghệ điện di</li>
+        </ul>
+      </div>
+      <p><strong>Địa chỉ:</strong> Tòa Nhà Kangnam, 67 P. Trần Xuân Soạn, Ngô Thì Nhậm, Hai Bà Trưng, Hà Nội 10000</p>
+      <p><strong>Đánh giá:</strong> ★★★★★ 195 Reviews</p>
+    </div>
+
+    <div class="actions">
+      <a href="#">📌 Products and Services</a>
+      <a href="#">📅 Make Appointment</a>
+    </div>
+<document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".card").classList.add("animate");
+});
+
+function showAlert(message) {
+  alert(message);
+}
+  <script src="script.js"></script>
+</body>
+</html>
